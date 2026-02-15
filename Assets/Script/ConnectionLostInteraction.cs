@@ -8,7 +8,7 @@ namespace VoiceSystem
     public class ConnectionLostInteractionPrefab : MonoBehaviour, IConditionalInteractable
     {
         
-        public InteractionData Data { get; private set; }
+        public InteractionData Data { get; set; }
 
         private void Awake()
         {

@@ -1299,10 +1299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstCutScene
   _subtitles:
-  - title: "Dedektif zaten sabahleyin bir olay mahallinde g\xFCc\xFCn\xFC \xE7ok
-      harcad\u0131\u011F\u0131 i\xE7in yorgun d\xFC\u015Fm\xFC\u015Ft\xFCr. bu y\xFCzden"
-    durationIfNoAudio: 7
-    pauseBeforeNext: 0
   - title: "ba\u015Fkalar\u0131n\u0131n son anlar\u0131n\u0131 geri ya\u015Famak
       pek bir i\u015Fe yaramaz gibi gelebilir. Fakat bir dedektif i\xE7in bu paha
       bi\xE7ilemez bir hediye olurdu. Bir t\xFCrl\xFC \xE7\xF6zemedikleri davalar\u0131
@@ -1520,8 +1516,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

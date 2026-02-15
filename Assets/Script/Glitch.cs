@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,16 +14,18 @@ public class Glitch : MonoBehaviour
     private void Start()
     {
         _mainImage = _glitchPrefab.GetComponent<Image>();
+        _glitchPrefab.SetActive(false);
     }
 
     public void StartGlitch()
     {
+        Debug.Log("Starting glitch");
         StartCoroutine(ExecuteGlitchEffect());
     }
 
     private IEnumerator ExecuteGlitchEffect()
     {
-        Invoke(nameof(NextScene), 2);
+        Invoke(nameof(NextScene), 1);
         _glitchPrefab.SetActive(true);
         while (true)
         {
@@ -38,10 +41,19 @@ public class Glitch : MonoBehaviour
 
     private void NextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StopAllCoroutines();
+        StartCoroutine(LoadSceneCoroutine());
     }
 
-    private void OnValidate()
+
+    private IEnumerator LoadSceneCoroutine()
+    {
+        yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        Next();
+    }
+
+    private void Next()
     {
         StopAllCoroutines();
         _glitchPrefab.SetActive(false);
