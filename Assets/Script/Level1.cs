@@ -11,12 +11,18 @@ public class Level1 : MonoBehaviour
 
     private void Start()
     {
+        Invoke(nameof(ALLAHCANIMIALSADAKURTULSAM), 1f);
+    }
+
+    private void ALLAHCANIMIALSADAKURTULSAM()
+    {
         if (VoiceManager.Instance)
         {
             VoiceManager.Instance.PlaySequence(_subtitles);
             VoiceManager.Instance.OnSequenceFinished += SequencenFinished;
         }
     }
+   
 
     private void SequencenFinished()
     {
